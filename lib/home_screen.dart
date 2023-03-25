@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:screibble_game/create_room_screen.dart';
+import 'package:screibble_game/widgets/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -21,32 +23,14 @@ class HomeScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton(
+              CustomButton(
+                buttonName: "Create",
                 onPressed: () {},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue),
-                  textStyle: MaterialStateProperty.all(
-                    const TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                  minimumSize: MaterialStateProperty.all(
-                    Size(MediaQuery.of(context).size.width / 2.5, 50),
-                  ),
-                ),
-                child: const Text("Create"),
               ),
-              ElevatedButton(
+              CustomButton(
+                buttonName: "Join",
                 onPressed: () {},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue),
-                  textStyle: MaterialStateProperty.all(
-                    const TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                  minimumSize: MaterialStateProperty.all(
-                    Size(MediaQuery.of(context).size.width / 2.5, 50),
-                  ),
-                ),
-                child: const Text("Join"),
-              ),
+              )
             ],
           ),
         ],
