@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:screibble_game/create_room_screen.dart';
+import 'package:screibble_game/join_room_screen.dart';
 import 'package:screibble_game/widgets/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,11 +26,19 @@ class HomeScreen extends StatelessWidget {
             children: [
               CustomButton(
                 buttonName: "Create",
-                onPressed: () {},
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CreateRoomScreen(),
+                  ),
+                ),
               ),
               CustomButton(
                 buttonName: "Join",
-                onPressed: () {},
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const JoinRoomScreen(),
+                  ),
+                ),
               )
             ],
           ),
